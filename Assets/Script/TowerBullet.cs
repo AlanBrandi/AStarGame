@@ -16,6 +16,24 @@ public class TowerBullet : MonoBehaviour
     [SerializeField] 
     private float explosionForce;
 
+    private bool _followTarget;
+    private Collider _target;
+    private Rigidbody _rb;
+    private float _speed;
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        if (_followTarget)
+        {
+            _rb.velocity = (_target.gameObject.transform.position - this.transform.position).normalized * _speed * 20;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (explosionRange > 0)
@@ -49,6 +67,10 @@ public class TowerBullet : MonoBehaviour
             //enemy.GetComponent<Rigidbody>().AddForce((enemy.gameObject.transform.position - transform.position).normalized * explosionForce, ForceMode.Impulse);
         }
     }
-
-
+    public void IsFollowTarget (bool isfollowTarget, Collider target, float speed)
+    {
+        _followTarget = isfollowTarget;
+        _target = target;
+        _speed = speed;
+    }
 }

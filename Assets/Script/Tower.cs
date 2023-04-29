@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-
+    public bool FollowTarget;
 
     [Header("Values")]
     [SerializeField]
@@ -51,7 +51,7 @@ public class Tower : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawSphere(transform.position, towerValues.range);
+        Gizmos.DrawWireSphere(transform.position, towerValues.range);
     }
     public void DetectEnemy(float range)
     {
@@ -70,19 +70,22 @@ public class Tower : MonoBehaviour
             {
                 cooldownTimer = Time.time + towerValues.fireRate;
 
-                GameObject tempBullet = Instantiate(bullet, bulletTransformSpawn.position, Quaternion.identity);
-
-                TowerBullet bullet_behaviour = tempBullet.GetComponent<TowerBullet>();
-                bullet_behaviour.BulletValues(towerValues.explosionRange, towerValues.explosionForce);
-
-                Rigidbody bullet_rb = tempBullet.GetComponent<Rigidbody>();
-                bullet_rb.AddForce((nearestEnemy.gameObject.transform.position - transform.position).normalized * bulletSpeed * 10, ForceMode.Force);
-
-                var dir = nearestEnemy.gameObject.transform.position - tempBullet.transform.position;
-                var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                tempBullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-                Destroy(tempBullet, 4);
+                if (!FollowTarget)
+                {
+                    //Quando ele atira a bala vai reto para a primeira mira.
+                    GameObject tempBullet = Instantiate(bullet, bulletTransformSpawn.position, Quaternion.identity);
+                    TowerBullet bullet_behaviour = tempBullet.GetComponent<TowerBullet>();
+                    bullet_behaviour.BulletValues(towerValues.explosionRange, towerValues.explosionForce);
+                    Rigidbody bullet_rb = tempBullet.GetComponent<Rigidbody>();
+                    bullet_rb.AddForce((nearestEnemy.gameObject.transform.position - tempBullet.transform.position).normalized * bulletSpeed * 500, ForceMode.Force);
+                    Destroy(tempBullet,6);
+                }
+                else
+                {
+                    GameObject tempBullet = Instantiate(bullet, bulletTransformSpawn.position, Quaternion.identity);
+                    TowerBullet bullet_behaviour = tempBullet.GetComponent<TowerBullet>();
+                    bullet_behaviour.IsFollowTarget(true, nearestEnemy, bulletSpeed);
+                }
             }
         }
     }

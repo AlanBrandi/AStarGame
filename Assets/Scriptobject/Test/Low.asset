@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa225ebc88016b241ab684b117f00702, type: 3}
-  m_Name: TowerValues
-  m_EditorClassIdentifier: Assembly-CSharp::TowerValues
+  m_Name: Low
+  m_EditorClassIdentifier: 
   upgradeLevel: 0
   maxLevel: 3
-  range: 82.23
-  bulletSpeed: 1
+  range: 0
+  bulletSpeed: 0
   explosionRange: 0
   explosionForce: 0
   fireRate: 5
   bulletDamage: 1
-  valueCost: 5
-  buildMesh:
-  - {fileID: 2778304620613754093, guid: d8f7ebb64ab5c084cb2154c28006d097, type: 3}
-  levelCost:
-  - {fileID: 11400000, guid: ba417380d1035df4b80363350e65115a, type: 2}
-  levels:
-  - {fileID: 11400000, guid: d8ffa16825e92424dbe2cc5c60377bae, type: 2}
+  valueCost: 0
+  buildMesh: []
+  levelCost: []
+  levels: []
