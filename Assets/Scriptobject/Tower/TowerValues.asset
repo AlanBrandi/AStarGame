@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerValues
   upgradeLevel: 0
   maxLevel: 3
-  range: 20.27
+  range: 10.51
   bulletSpeed: 1
   explosionRange: 0
   explosionForce: 0
