@@ -1,2 +1,2 @@
-# AStarGame
+# AStarGame*
  
