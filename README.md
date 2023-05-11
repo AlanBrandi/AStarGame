@@ -1,6 +1,2 @@
-# AStarGame*
-
-
-
-Teste
+# AStarGame
  
