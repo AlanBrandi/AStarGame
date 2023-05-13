@@ -58,7 +58,7 @@ namespace QPathFinder
 
             while (true)
             {
-                _currentIndex = Mathf.Clamp(_currentIndex, 0, _pathToFollow.Count - 1);
+               // _currentIndex = Mathf.Clamp(_currentIndex, 0, _pathToFollow.Count - 1);
 
                 if (IsOnPoint(_currentIndex))
                 {

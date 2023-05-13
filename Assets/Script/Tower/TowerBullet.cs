@@ -20,6 +20,7 @@ public class TowerBullet : MonoBehaviour
     private Collider _target;
     private Rigidbody _rb;
     private float _speed;
+    private float _damage;
 
     private void Awake()
     {
@@ -33,12 +34,15 @@ public class TowerBullet : MonoBehaviour
             _rb.velocity = (_target.gameObject.transform.position - this.transform.position).normalized * _speed * 20;
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (explosionRange > 0)
         {
             ExplosiveBullet(explosionRange);
+        }
+        else if (other.TryGetComponent<EnemyHealth>(out EnemyHealth entity))
+        {
+            entity.Damage(_damage);
         }
         Destroy(this.gameObject);
     }
@@ -57,20 +61,21 @@ public class TowerBullet : MonoBehaviour
         enemyArray = Physics.OverlapSphere(transform.position, range, mask);
         foreach (Collider enemy in enemyArray)
         {
-            /* Dar dano no inimigo.
-            if (enemy.TryGetComponent<Health>(out Health entity))
+            if (enemy.TryGetComponent<EnemyHealth>(out EnemyHealth entity))
             {
-                entity.HealthValue--;
+                entity.Damage(_damage);
+                Debug.Log("Damage value: " + _damage);
             }
-            */
             //knockback
-            //enemy.GetComponent<Rigidbody>().AddForce((enemy.gameObject.transform.position - transform.position).normalized * explosionForce, ForceMode.Impulse);
+            enemy.GetComponent<Rigidbody>().AddForce((enemy.gameObject.transform.position - transform.position).normalized * explosionForce, ForceMode.Impulse);
         }
     }
-    public void IsFollowTarget (bool isfollowTarget, Collider target, float speed)
+    public void IsFollowTarget (bool isfollowTarget, Collider target, float speed, float damage)
     {
         _followTarget = isfollowTarget;
         _target = target;
         _speed = speed;
+        _damage = damage;
     }
+
 }

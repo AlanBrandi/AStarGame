@@ -84,7 +84,7 @@ public class Tower : MonoBehaviour
                 {
                     GameObject tempBullet = Instantiate(bullet, bulletTransformSpawn.position, Quaternion.identity);
                     TowerBullet bullet_behaviour = tempBullet.GetComponent<TowerBullet>();
-                    bullet_behaviour.IsFollowTarget(true, nearestEnemy, bulletSpeed);
+                    bullet_behaviour.IsFollowTarget(true, nearestEnemy, bulletSpeed, towerValues.bulletDamage);
                 }
             }
         }
