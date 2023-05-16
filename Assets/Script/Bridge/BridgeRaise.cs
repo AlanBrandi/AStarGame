@@ -47,7 +47,6 @@ public class BridgeRaise : MonoBehaviour, ISubject
                 {
                     Debug.Log("Hit bridge");
                     hit.collider.GetComponent<Bridge>().Raise();
-                    RaiseBridge();
                 }
             }
         }
@@ -68,6 +67,7 @@ public class BridgeRaise : MonoBehaviour, ISubject
         foreach (IObserver observer in _observers)
         {
             observer.NotifyBridgeRaise();
+            Debug.LogWarning("Avisou");
         }
     }
     #endregion
