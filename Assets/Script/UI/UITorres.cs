@@ -4,23 +4,42 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UITorres : MonoBehaviour,IPointerClickHandler
+public class UITorres : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    Camera m_Camera;
+    Canvas canvas;
+
+    private void Awake()
     {
-        
+        m_Camera = FindAnyObjectByType<Camera>();
     }
+
+    private void Start()
+    {
+        canvas = GetComponent<Canvas>();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        Click();
     }
 
-
-    public void OnPointerClick(PointerEventData eventData)
+    private void Click()
     {
-        Debug.Log("Você clicou em: " + eventData.pointerCurrentRaycast.gameObject.name);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            Ray ray = m_Camera.ScreenPointToRay(mousePos);
+            
+            
+
+
+
+        }
     }
+   
+    
 }
