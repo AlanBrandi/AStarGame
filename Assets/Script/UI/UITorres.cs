@@ -8,7 +8,10 @@ public class UITorres : MonoBehaviour
 {
 
     Camera m_Camera;
-    Canvas canvas;
+
+    [SerializeField]  List<Canvas> canvasList;
+   
+
 
     private void Awake()
     {
@@ -17,7 +20,9 @@ public class UITorres : MonoBehaviour
 
     private void Start()
     {
-        canvas = GetComponent<Canvas>();
+        Canvas[] canvas = FindObjectsOfType<Canvas>();
+        canvasList = new List<Canvas>(canvas);
+       
     }
 
 
@@ -33,8 +38,11 @@ public class UITorres : MonoBehaviour
         {
             Vector3 mousePos = Input.mousePosition;
             Ray ray = m_Camera.ScreenPointToRay(mousePos);
-            
-            
+
+            if (Physics.Raycast(ray, out RaycastHit hit) || hit.transform.tag == "TowerSpot")
+            {
+                
+            }
 
 
 

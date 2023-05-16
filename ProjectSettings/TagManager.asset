@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - wp
+  - TowerSpot
   layers:
   - Default
   - TransparentFX
