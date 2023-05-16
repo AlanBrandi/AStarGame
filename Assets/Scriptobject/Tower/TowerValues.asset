@@ -18,7 +18,7 @@ MonoBehaviour:
   bulletSpeed: 1
   explosionRange: 20
   explosionForce: 21.12
-  fireRate: 2
+  fireRate: 0.5
   bulletDamage: 1
   valueCost: 5
   buildMesh:
@@ -27,3 +27,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba417380d1035df4b80363350e65115a, type: 2}
   levels:
   - {fileID: 11400000, guid: d8ffa16825e92424dbe2cc5c60377bae, type: 2}
+  - {fileID: 11400000, guid: 9e00670effbfa4b42881d975afcda1b3, type: 2}
+  - {fileID: 11400000, guid: 999c242dee54d374d876316b923ec006, type: 2}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BasicEnemy
   m_EditorClassIdentifier: 
   eName: Basic
-  health: 10
-  speed: 5
+  health: 1
+  speed: 10

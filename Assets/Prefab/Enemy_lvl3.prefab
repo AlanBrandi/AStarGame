@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6049099637332987934}
   - component: {fileID: 6602692014515524974}
   m_Layer: 3
-  m_Name: Enemy
+  m_Name: Enemy_lvl3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c3525921e3718f64f85f46134d0e46ee, type: 2}
+  - {fileID: 2100000, guid: 54123559d6a9d3b4b86672a5037627a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96da344381a364c59b8ff27429705cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
   alignToPath: 1
 --- !u!114 &6049099637332987929
 MonoBehaviour:
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetNode: 8
-  enemyStats: {fileID: 11400000, guid: 8722acf3762788143a8c2d001eac00af, type: 2}
+  enemyStats: {fileID: 11400000, guid: ffda96b4ea45d634b91292530e873f00, type: 2}
   autoRotateTowardsDestination: 1
   playerFloatOffset: 0
   raycastOriginOffset: 0
@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ce8459ce1f2e44d9522a6b0554d668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 3

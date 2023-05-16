@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e0b4b0e439821a428a37e62cc655039, type: 3}
-  m_Name: TowerCost
+  m_Script: {fileID: 11500000, guid: aa2ca3385ef4a84478875796ec910d1e, type: 3}
+  m_Name: TowerLevel2
   m_EditorClassIdentifier: 
-  gold: 6
+  increaseRange: 15
+  increaseBulletSpeed: 0
+  increaseExplosionRange: 0
+  increaseExplosionForce: 0
+  increaseFireRate: 0.4
+  increaseBulletDamage: 0
