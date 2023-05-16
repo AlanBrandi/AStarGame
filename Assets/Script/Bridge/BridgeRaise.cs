@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public interface IObserver
 {
@@ -14,6 +15,9 @@ public interface ISubject
 }
 public class BridgeRaise : MonoBehaviour, ISubject
 {
+    //Colocar no lugar certo
+    public Animator Ponte1a;
+    public Animator Ponte1b;
     private Camera mainCamera;
     public List<IObserver> _observers = new List<IObserver>();
 
@@ -38,7 +42,11 @@ public class BridgeRaise : MonoBehaviour, ISubject
     {
         if (Input.GetMouseButtonDown(0))
         {
-          
+            //colocar no lugar certo
+            Ponte1a.SetBool("Idle",false);
+            Ponte1a.SetBool("Raise", true);
+            Ponte1b.SetBool("Idle", false);
+            Ponte1b.SetBool("Raise", true);
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
