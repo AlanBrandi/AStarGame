@@ -10,18 +10,26 @@ public class UITorres : MonoBehaviour
     Camera m_Camera;
 
     [SerializeField]  List<Canvas> canvasList;
-   
 
+    private RaycastHit hitTemp;
+
+    bool openTab = false;
 
     private void Awake()
     {
         m_Camera = FindAnyObjectByType<Camera>();
+        Canvas[] canvas = FindObjectsOfType<Canvas>();
+        canvasList = new List<Canvas>(canvas);
+
     }
 
     private void Start()
     {
-        Canvas[] canvas = FindObjectsOfType<Canvas>();
-        canvasList = new List<Canvas>(canvas);
+        foreach (Canvas canvas in canvasList)
+        {
+            canvas.GetComponent<Canvas>().enabled = false;
+        }
+        
        
     }
 
@@ -38,16 +46,34 @@ public class UITorres : MonoBehaviour
         {
             Vector3 mousePos = Input.mousePosition;
             Ray ray = m_Camera.ScreenPointToRay(mousePos);
-
-            if (Physics.Raycast(ray, out RaycastHit hit) || hit.transform.tag == "TowerSpot")
+            
+            if(openTab != true)
             {
-                
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    if (hit.transform.tag == "TowerSpot")
+                    {
+                        Debug.Log(hit.transform.tag);
+                        hit.collider.GetComponentInChildren<Canvas>().enabled = true;
+                        hitTemp = hit;
+                        openTab = true;
+
+                    }
+
+                }
             }
+
+            
 
 
 
         }
     }
    
+    public void CloseTab()
+    {
+        hitTemp.collider.GetComponentInChildren<Canvas>().enabled = false;
+        openTab = false;
+    }
     
 }
