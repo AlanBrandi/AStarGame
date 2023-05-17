@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using QPathFinder;
 using TMPro;
+using UnityEditor;
 
 public class Bridge : MonoBehaviour
 {
@@ -25,28 +26,34 @@ public class Bridge : MonoBehaviour
 
     private TMP_Text countdownText;
 
-    [Header("Visual FX")] [SerializeField] private GameObject _breakFX;
+    [Header("Visual FX")]
+    [SerializeField] private GameObject _breakFX;
     [SerializeField] private GameObject _buildCompleteFX;
+    [SerializeField] private GameObject _buildingFX;
 
-    [Header("Sound FX")] [SerializeField] private AudioSource _breakSound;
+    [Header("Sound FX")] 
+    [SerializeField] private AudioSource _breakSound;
     [SerializeField] private AudioSource _buildCompleteSound;
+    [SerializeField] private AudioSource _buildingSound;
 
     public void Raise()
     {
         _pathFinder.graphData.GetPath(_pathIndex).isOpen = false;
         _bridge.SetActive(false);
         SpawnEffect(_breakFX, _breakSound);
+        SpawnEffect(_buildingFX, _buildingSound);
         _canvas.SetActive(true);
         NotifyObservers();
         countdownText = _canvas.GetComponentInChildren<TMP_Text>();
         _canvas.SetActive(true);
         StartCountdown();
+        _buildingFX.SetActive(true);
     }
 
     public void Lower()
     {
         _bridge.SetActive(true);
-        _pathFinder.graphData.GetPath(12).isOpen = true;
+        _pathFinder.graphData.GetPath(_pathIndex).isOpen = true;
         SpawnEffect(_buildCompleteFX, _buildCompleteSound);
         NotifyObservers();
     }
@@ -58,7 +65,7 @@ public class Bridge : MonoBehaviour
 
     private void SpawnEffect(GameObject fx, AudioSource soundFx)
     {
-        Instantiate(fx, _WhereToSpawn.transform.position, Quaternion.identity);
+        Instantiate(fx, _WhereToSpawn.transform.position, fx.transform.rotation);
         soundFx.Play();
     }
 
@@ -82,6 +89,8 @@ public class Bridge : MonoBehaviour
             _canvas.SetActive(false);
             StopCoroutine(StartCountdownCou());
             Lower();
+            _buildingFX.SetActive(false);
+            _buildingSound.Stop();
         }
     }
 }
