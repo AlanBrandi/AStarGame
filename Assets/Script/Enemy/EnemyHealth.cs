@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using QPathFinder;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -25,5 +26,6 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        BridgeRaise.Instance.Detach(this.GetComponent<Enemy>());
     }
 }

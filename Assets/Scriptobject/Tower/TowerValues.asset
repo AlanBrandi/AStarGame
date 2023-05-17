@@ -16,8 +16,8 @@ MonoBehaviour:
   maxLevel: 3
   range: 10.51
   bulletSpeed: 1
-  explosionRange: 20
-  explosionForce: 21.12
+  explosionRange: 0
+  explosionForce: 0
   fireRate: 0.5
   bulletDamage: 1
   valueCost: 5

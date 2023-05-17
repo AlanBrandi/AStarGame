@@ -23,7 +23,6 @@ namespace QPathFinder
         {
             QPathFinder.Logger.SetLoggingLevel(debugLogLevel);
             QPathFinder.Logger.SetDebugDrawLineDuration(debugDrawLineDuration);
-
         }
         private void Start()
         {
@@ -58,7 +57,6 @@ namespace QPathFinder
              );
             }
         }
-
         void FollowThePathWithGroundSnap(List<Vector3> nodes)
         {
             PathFollowerUtility.FollowPathWithGroundSnap(gameObject.transform,
@@ -68,13 +66,10 @@ namespace QPathFinder
                                                         Vector3.down, playerFloatOffset, LayerMask.NameToLayer(PathFinder.instance.graphData.groundColliderLayerName),
                                                         raycastOriginOffset, raycastDistanceFromOrigin);
         }
-
         void FollowThePathNormally(List<Vector3> nodes)
         {
             PathFollowerUtility.FollowPath(gameObject.transform, nodes, enemyStats.speed, autoRotateTowardsDestination);
         }
-
-
         public void SeachForClosest()
         {
             MoveTo(nodes[targetNode]);
