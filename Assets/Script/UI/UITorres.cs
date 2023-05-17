@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
+
 
 public class UITorres : MonoBehaviour
 {
 
     Camera m_Camera;
 
-    [SerializeField]  List<Canvas> canvasList;
+    [SerializeField] List<Canvas> canvasList;
+    [SerializeField] List<Button> buttonList;
 
     private RaycastHit hitTemp;
+
+    
 
     bool openTab = false;
 
@@ -20,7 +25,8 @@ public class UITorres : MonoBehaviour
         m_Camera = FindAnyObjectByType<Camera>();
         Canvas[] canvas = FindObjectsOfType<Canvas>();
         canvasList = new List<Canvas>(canvas);
-
+        Button[] btn = FindObjectsOfType<Button>();
+        buttonList = new List<Button>(btn);
     }
 
     private void Start()
@@ -29,7 +35,10 @@ public class UITorres : MonoBehaviour
         {
             canvas.GetComponent<Canvas>().enabled = false;
         }
-        
+        foreach(Button button in buttonList)
+        {
+            button.GetComponent<Button>();
+        }
        
     }
 
