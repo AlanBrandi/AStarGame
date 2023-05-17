@@ -23,7 +23,7 @@ namespace QPathFinder
         {
             QPathFinder.Logger.SetLoggingLevel(debugLogLevel);
             QPathFinder.Logger.SetDebugDrawLineDuration(debugDrawLineDuration);
-            BridgeRaise.Instance.Attach(this.GetComponent<QPathFinder.Enemy>());
+
         }
         private void Start()
         {
@@ -33,17 +33,18 @@ namespace QPathFinder
                 nodes = PathFinder.instance.graphData.nodes;
                 MoveTo(nodes[targetNode]);
             }
+            BridgeRaise.Instance.Attach(this.GetComponent<Enemy>());
         }
         public void NotifyBridgeRaise()
         {
-            Debug.Log("NotifyBridgRaise ====== AHHHHHHHHHHHHHH");
+            Debug.Log("NotifyBridgRaise");
             SeachForClosest();
         }
         void MoveTo(Node node)
         {
             {
                 PathFinder.instance.FindShortestPathOfPoints(gameObject.transform.position, node.Position, PathFinder.instance.graphData.lineType,
-                Execution.Synchronous,
+                Execution.Asynchronously,
                 SearchMode.Simple,
                 delegate (List<Vector3> points)
                 {
@@ -77,7 +78,9 @@ namespace QPathFinder
 
         public void SeachForClosest()
         {
+            nodes = PathFinder.instance.graphData.nodes;
             MoveTo(nodes[targetNode]);
         }
+
     }
 }

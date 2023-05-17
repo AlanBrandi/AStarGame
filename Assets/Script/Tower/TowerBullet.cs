@@ -31,14 +31,7 @@ public class TowerBullet : MonoBehaviour
     {
         if (_followTarget)
         {
-            if(_target != null)
-            {
-                _rb.velocity = (_target.gameObject.transform.position - this.transform.position).normalized * _speed * 20;
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
+            _rb.velocity = (_target.gameObject.transform.position - this.transform.position).normalized * _speed * 20;
         }
     }
     private void OnTriggerEnter(Collider other)

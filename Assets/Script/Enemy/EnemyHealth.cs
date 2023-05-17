@@ -24,7 +24,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        BridgeRaise.Instance.Detach(gameObject.GetComponent<QPathFinder.Enemy>());
         Destroy(gameObject);
     }
 }
