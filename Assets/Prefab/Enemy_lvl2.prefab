@@ -133,7 +133,7 @@ MonoBehaviour:
   playerFloatOffset: 0
   raycastOriginOffset: 0
   raycastDistanceFromOrigin: 40
-  thoroughPathFinding: 0
+  thoroughPathFinding: 1
   useGroundSnap: 0
   nodes: []
   debugLogLevel: 1

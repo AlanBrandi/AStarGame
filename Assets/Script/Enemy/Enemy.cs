@@ -37,15 +37,14 @@ namespace QPathFinder
         }
         public void NotifyBridgeRaise()
         {
-            Debug.Log("NotifyBridgRaise");
             SeachForClosest();
         }
         void MoveTo(Node node)
         {
             {
                 PathFinder.instance.FindShortestPathOfPoints(gameObject.transform.position, node.Position, PathFinder.instance.graphData.lineType,
-                Execution.Asynchronously,
-                SearchMode.Simple,
+                Execution.Synchronous,
+                SearchMode.Intermediate,
                 delegate (List<Vector3> points)
                 {
                     PathFollowerUtility.StopFollowing(gameObject.transform);
@@ -78,7 +77,6 @@ namespace QPathFinder
 
         public void SeachForClosest()
         {
-            nodes = PathFinder.instance.graphData.nodes;
             MoveTo(nodes[targetNode]);
         }
 
