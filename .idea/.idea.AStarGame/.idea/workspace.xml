@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="df942be3-21c6-4e01-a432-68c95c3c67d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AStarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AStarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/MainCamera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/MainCamera.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Objetcs/Bat/Texture/Material #164.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Objetcs/Bat/Texture/Material #164.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AIScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AIScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Introdução.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Introdução.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bridge/Bridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Bridge/Bridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bridge/BridgeRaise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Bridge/BridgeRaise.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Intro/Intro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Intro/Intro.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684349765842</updated>
       <workItem from="1684349767358" duration="2219000" />
-      <workItem from="1684421238930" duration="3097000" />
+      <workItem from="1684421238930" duration="6596000" />
     </task>
     <servers />
   </component>

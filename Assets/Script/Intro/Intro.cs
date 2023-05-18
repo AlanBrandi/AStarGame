@@ -15,6 +15,8 @@ namespace Script.Intro
         //Canvas Audio pressed button.
         [SerializeField] AudioSource _soundFx;
 
+        [SerializeField] private string _scene;
+
         void Update()
         {
             if (Input.anyKeyDown)
@@ -36,9 +38,9 @@ namespace Script.Intro
         {
             Invoke(nameof(LoadScene), delay);
         }
-        public void LoadScene()
+        private void LoadScene()
         {
-            SceneManager.LoadScene("AIScene");
+            SceneManager.LoadScene(_scene);
         }
 
         public void ExitWithDelay(float delay)

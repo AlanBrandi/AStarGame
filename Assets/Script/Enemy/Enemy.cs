@@ -43,7 +43,7 @@ namespace QPathFinder
             {
                 PathFinder.instance.FindShortestPathOfPoints(gameObject.transform.position, node.Position, PathFinder.instance.graphData.lineType,
                 Execution.Synchronous,
-                SearchMode.Intermediate,
+                SearchMode.Complex,
                 delegate (List<Vector3> points)
                 {
                     PathFollowerUtility.StopFollowing(gameObject.transform);
@@ -72,7 +72,10 @@ namespace QPathFinder
         }
         public void SeachForClosest()
         {
-            MoveTo(nodes[targetNode]);
+            if (this != null)
+            {
+                MoveTo(nodes[targetNode]); 
+            }
         }
 
     }
