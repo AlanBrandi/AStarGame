@@ -41,9 +41,12 @@ public class BridgeRaise : MonoBehaviour, ISubject
             {
                 if (hit.collider.CompareTag("Bridge"))
                 {
-                    Debug.Log("Hit bridge");
-                    hit.collider.GetComponent<Bridge>().Raise();
-                    RaiseBridge();
+                    if (!hit.collider.GetComponent<Bridge>().isBroken)
+                    {
+                        Debug.Log("Hit bridge");
+                        hit.collider.GetComponent<Bridge>().Raise();
+                        RaiseBridge();
+                    }
                 }
             }
         }

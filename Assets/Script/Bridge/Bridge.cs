@@ -7,8 +7,8 @@ using UnityEditor;
 
 public class Bridge : MonoBehaviour
 {
-    [Header("Configuration")] [SerializeField]
-    private float _timeToLower;
+    [Header("Configuration")] 
+    [SerializeField] private float _timeToLower;
 
     //Path to disable.
     [SerializeField] private int _pathIndex;
@@ -36,8 +36,11 @@ public class Bridge : MonoBehaviour
     [SerializeField] private AudioSource _buildCompleteSound;
     [SerializeField] private AudioSource _buildingSound;
 
+    //Function variables.
+    public bool isBroken;
     public void Raise()
     {
+        isBroken = true;
         _pathFinder.graphData.GetPath(_pathIndex).isOpen = false;
         _bridge.SetActive(false);
         SpawnEffect(_breakFX, _breakSound);
@@ -56,6 +59,7 @@ public class Bridge : MonoBehaviour
         _pathFinder.graphData.GetPath(_pathIndex).isOpen = true;
         SpawnEffect(_buildCompleteFX, _buildCompleteSound);
         NotifyObservers();
+        isBroken = false;
     }
 
     private void NotifyObservers()
