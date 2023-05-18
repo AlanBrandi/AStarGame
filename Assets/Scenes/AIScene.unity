@@ -21435,7 +21435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146532e016d048f41bdc6eb466868399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGO: {fileID: 6049099637332988391, guid: 8ebbd42878de42547a51fa1b217944ba, type: 3}
+  playerGO: {fileID: 1087609078668661219, guid: 95b4d35396b24c548b0ee8dfbd51d9d9, type: 3}
   whereToSpawn: {fileID: 1956772611}
 --- !u!4 &1956772611
 Transform:
