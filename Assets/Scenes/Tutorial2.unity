@@ -21892,11 +21892,11 @@ MonoBehaviour:
   speechBubbleText: {fileID: 1816842224}
   dialogueTexts:
   - "Vamos come\xE7ar..... "
-  - "A antiga mina, \xE9 um lugar maravilhoso, mas infelizmente est\xE1 cheio de
+  - "A antiga mina, \xE9 um lugar maravilhoso mas, infelizmente, est\xE1 cheia de
     perigos."
-  - "Por sorte, concertei uma das torres, \xE9 ela quem me protege dessas coisas."
-  - "A magia desse lugar \xE9 t\xE3o poderosa, que todos os monstros que a torre
-    destr\xF3i viram moedas! ha ha!"
+  - "Por sorte, consertei uma das torres, \xE9 ela que me protege dessas coisas."
+  - "A magia desse lugar \xE9 t\xE3o poderosa que todos os monstros que a torre destr\xF3i
+    viram moedas! ha ha!"
   anim: {fileID: 1098186906}
   audioSource: {fileID: 1098186908}
   spoke: 0

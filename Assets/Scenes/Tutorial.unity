@@ -2238,7 +2238,9 @@ MonoBehaviour:
   - "Bom, vou te explicar o b\xE1sico!"
   anim: {fileID: 1098186906}
   audioSource: {fileID: 248250277}
-  Spoke: 0
+  spoke: 0
+  startAlone: 0
+  changeToThisState: 0
 --- !u!114 &248250279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21603,12 +21605,12 @@ MonoBehaviour:
   speechBubbleText: {fileID: 1814191830}
   dialogueTexts:
   - -Olha o que eu achei aqui!
-  - "-O que \xE9 isso cara? um buraco?"
-  - "-D\xFAvido voc\xEA pular ai!"
-  - "-Eu? ta maluco? vai voc\xEA!"
+  - "-O que \xE9 isso cara? Um buraco?"
+  - "-D\xFAvido voc\xEA pular a\xED!"
+  - "-Eu? T\xE1 maluco? Vai voc\xEA!"
   - -Fala para o ******!
   - -Verdade, manda ele ir!
-  - "-Ou ******! olha aqui r\xE1pid\xE3o!"
+  - "-Ou ******! Olha aqui r\xE1pid\xE3o!"
   - AHHHHHHHHHHHHHHHHH
   - AHHHH
   - AH

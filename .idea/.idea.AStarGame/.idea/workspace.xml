@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df942be3-21c6-4e01-a432-68c95c3c67d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AStarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AStarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy_lvl2 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy_lvl2 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy_lvl3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy_lvl3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AIScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AIScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Introdução.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Introdução.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/EnemyHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/SpawnEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/SpawnEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="df942be3-21c6-4e01-a432-68c95c3c67d7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684349765842</updated>
       <workItem from="1684349767358" duration="2219000" />
-      <workItem from="1684421238930" duration="23933000" />
+      <workItem from="1684421238930" duration="24429000" />
     </task>
     <servers />
   </component>
