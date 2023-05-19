@@ -4686,7 +4686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675276c5b23748945a415e8e39250316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 1288828779}
   value: 120
 --- !u!1 &550965847
 GameObject:
@@ -13411,6 +13411,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 6054348210192650441, guid: 5347d1aadc7c577438457137f4b932f6, type: 3}
   m_PrefabInstance: {fileID: 1288828776}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1288828779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6054348211257905998, guid: 5347d1aadc7c577438457137f4b932f6, type: 3}
+  m_PrefabInstance: {fileID: 1288828776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527607684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1294262902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99c41c47fd868e243916b05ff6da2f99, type: 3}

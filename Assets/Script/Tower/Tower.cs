@@ -46,7 +46,10 @@ public class Tower : MonoBehaviour
     {
         TowerValuesSO tempTurretValues = Instantiate(towerValues);
         towerValues = tempTurretValues;
-        towerLevel.text = currentTowerLevel.ToString();
+        if (towerValues != null)
+        {
+            towerLevel.text = currentTowerLevel.ToString();
+        }
     }
  
     private void FixedUpdate()
