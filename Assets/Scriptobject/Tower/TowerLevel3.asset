@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseRange: 15
   increaseBulletSpeed: 2
-  increaseExplosionRange: 0
-  increaseExplosionForce: 0
+  increaseExplosionRange: 1
+  increaseExplosionForce: 1
   increaseFireRate: 0.3
   increaseBulletDamage: 2

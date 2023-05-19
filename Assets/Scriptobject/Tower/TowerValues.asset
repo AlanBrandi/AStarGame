@@ -20,7 +20,7 @@ MonoBehaviour:
   explosionForce: 0
   fireRate: 0.5
   bulletDamage: 1
-  valueCost: 5
+  valueCost: 20
   buildMesh:
   - {fileID: 2778304620613754093, guid: d8f7ebb64ab5c084cb2154c28006d097, type: 3}
   levelCost:

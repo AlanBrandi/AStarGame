@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TowerLevel2
   m_EditorClassIdentifier: 
   increaseRange: 15
-  increaseBulletSpeed: 0
-  increaseExplosionRange: 0
-  increaseExplosionForce: 0
+  increaseBulletSpeed: 0.5
+  increaseExplosionRange: 0.5
+  increaseExplosionForce: 0.5
   increaseFireRate: 0.4
-  increaseBulletDamage: 0
+  increaseBulletDamage: 1

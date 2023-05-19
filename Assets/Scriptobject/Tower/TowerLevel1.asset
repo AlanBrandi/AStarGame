@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ca3385ef4a84478875796ec910d1e, type: 3}
   m_Name: TowerLevel1
   m_EditorClassIdentifier: 
-  increaseRange: 0
-  increaseBulletSpeed: 0
+  increaseRange: 10.5
+  increaseBulletSpeed: 1
   increaseExplosionRange: 0
   increaseExplosionForce: 0
-  increaseFireRate: 0
-  increaseBulletDamage: 0
+  increaseFireRate: 0.5
+  increaseBulletDamage: 1
