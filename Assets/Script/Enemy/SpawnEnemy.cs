@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    [SerializeField] private GameObject playerGO;
+    [SerializeField] private GameObject Enemy;
     [SerializeField] private Transform whereToSpawn;
 
-    public void SpawnEnemyToPlace()
+    public void SpawnEnemyToPlace(GameObject enemy)
     {
-        Instantiate(playerGO, new Vector3(whereToSpawn.position.x, whereToSpawn.position.y, whereToSpawn.position.z), Quaternion.identity);
+        Instantiate(enemy, new Vector3(whereToSpawn.position.x, whereToSpawn.position.y, whereToSpawn.position.z), Quaternion.identity);
     }
 }

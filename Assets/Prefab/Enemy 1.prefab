@@ -374,6 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  _dropMoneyQuantity: 1
 --- !u!1 &2786621568158945123
 GameObject:
   m_ObjectHideFlags: 0

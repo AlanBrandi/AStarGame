@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: FakeUI
+    uniqueID: 1717789563
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

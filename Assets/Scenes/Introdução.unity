@@ -32602,7 +32602,7 @@ MonoBehaviour:
   animCamera: {fileID: 65118428}
   animCanvas: {fileID: 1079070841}
   _soundFx: {fileID: 1079070842}
-  _scene: AIScene
+  _scene: Tutorial
 --- !u!1 &1896330487
 GameObject:
   m_ObjectHideFlags: 0

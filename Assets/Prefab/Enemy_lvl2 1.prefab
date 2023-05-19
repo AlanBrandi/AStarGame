@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  _dropMoneyQuantity: 2
 --- !u!1001 &9185851237730753514
 PrefabInstance:
   m_ObjectHideFlags: 0

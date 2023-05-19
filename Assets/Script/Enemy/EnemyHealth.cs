@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using QPathFinder;
+using Script.Money;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
     public float maxHealth;
     private float currentHealth;
+    [SerializeField] private int _dropMoneyQuantity;
 
     private void Start()
     {
@@ -19,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Die();
-            //Dar dinheiro para o player
+            Currency.Instance.AddMoney(_dropMoneyQuantity);
         }
     }
 
