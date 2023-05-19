@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -9,6 +10,11 @@ public class Tower : MonoBehaviour
     [Header("Values")]
     [SerializeField]
     public TowerValuesSO towerValues;
+
+    [SerializeField]
+    public TMP_Text towerLevel;
+
+    public int currentTowerLevel;
 
     [Header("EnemyDetector")]
     private Collider[] enemyArray;
@@ -20,6 +26,10 @@ public class Tower : MonoBehaviour
 
     [SerializeField]
     private Transform bulletTransformSpawn;
+
+    [Header("SoundFX")] 
+    [SerializeField] 
+    private AudioSource _audioSource;
 
     [Header("Upgrade")]
     [SerializeField]
@@ -36,6 +46,7 @@ public class Tower : MonoBehaviour
     {
         TowerValuesSO tempTurretValues = Instantiate(towerValues);
         towerValues = tempTurretValues;
+        towerLevel.text = currentTowerLevel.ToString();
     }
  
     private void FixedUpdate()
@@ -72,6 +83,8 @@ public class Tower : MonoBehaviour
 
                 if (!FollowTarget)
                 {
+                    _audioSource.pitch = Random.Range(0.8f, 1.2f);
+                    _audioSource.Play();
                     //Quando ele atira a bala vai reto para a primeira mira.
                     GameObject tempBullet = Instantiate(bullet, bulletTransformSpawn.position, Quaternion.identity);
                     TowerBullet bullet_behaviour = tempBullet.GetComponent<TowerBullet>();
@@ -82,6 +95,8 @@ public class Tower : MonoBehaviour
                 }
                 else
                 {
+                    _audioSource.pitch = Random.Range(0.8f, 1.2f);
+                    _audioSource.Play();
                     GameObject tempBullet = Instantiate(bullet, bulletTransformSpawn.position, Quaternion.identity);
                     TowerBullet bullet_behaviour = tempBullet.GetComponent<TowerBullet>();
                     bullet_behaviour.IsFollowTarget(true, nearestEnemy, bulletSpeed, towerValues.bulletDamage);

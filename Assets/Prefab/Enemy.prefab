@@ -152,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  _dropMoneyQuantity: 0
+  _visualFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}

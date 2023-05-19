@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour
 {
     public Text txtHealth;
     private int maxHealth = 20;
+    [SerializeField] private string SceneToLoad;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +21,7 @@ public class HealthSystem : MonoBehaviour
 
             if (maxHealth <= 0)
             {
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene(SceneToLoad);
             }
         }
     }

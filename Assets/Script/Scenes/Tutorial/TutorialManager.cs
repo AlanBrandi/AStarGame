@@ -23,6 +23,7 @@ namespace Script.Scenes.Tutorial
         [SerializeField] private string currentState;
         [SerializeField] private GameObject level1;
         [SerializeField] private GameObject level2;
+        [SerializeField] private GameObject level3;
         
         public static TutorialManager Instance;
         private void Awake()
@@ -60,7 +61,8 @@ namespace Script.Scenes.Tutorial
                     break;
                 case EnumTutorialState.Level3:
                 {
-                    
+                    level2.SetActive(false);
+                    level3.SetActive(true);
                 }
                     break;
                 case EnumTutorialState.Level4:

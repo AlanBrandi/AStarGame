@@ -32,7 +32,10 @@ namespace QPathFinder
                 nodes = PathFinder.instance.graphData.nodes;
                 MoveTo(nodes[targetNode]);
             }
-            BridgeRaise.Instance.Attach(this.GetComponent<Enemy>());
+            if (BridgeRaise.Instance != null)
+            {
+                BridgeRaise.Instance.Attach(this.GetComponent<Enemy>());  
+            }
         }
         public void NotifyBridgeRaise()
         {

@@ -10,12 +10,13 @@ namespace Script.Money
         public static Currency Instance;
 
         [SerializeField] private TMP_Text _moneyTXT;
-        private MoneySO _moneySo;
-        
-        public int currentMoney { get; set; }
+        [SerializeField] private MoneySO _moneySo;
+
+        public int currentMoney;
         
         void Awake()
         {
+            SetMoneyTo(0);
             if (!Instance)
             {
                 Instance = this;
@@ -24,19 +25,24 @@ namespace Script.Money
             {
                 Destroy(this.gameObject);
             }
-            _moneySo = Resources.Load<MoneySO>("Currency");
+
+            _moneySo.currentMoney = 80;
             currentMoney = _moneySo.currentMoney;
+            UpdateMoneyUI(currentMoney);
         }
+        
         #region MoneySet
         public void AddMoney(int quantity)
         {
-            currentMoney += quantity;
+            currentMoney =  currentMoney + quantity;
             _moneySo.currentMoney = currentMoney;
             UpdateMoneyUI(currentMoney);
         }
         public void TakeMoney(int purchaseValue)
         {
-            currentMoney -= purchaseValue;
+            Debug.LogWarning(currentMoney);
+            currentMoney =  currentMoney - purchaseValue;
+            Debug.LogWarning(currentMoney);
             _moneySo.currentMoney = currentMoney;
             UpdateMoneyUI(currentMoney);
         }
@@ -52,7 +58,7 @@ namespace Script.Money
       
         public bool CanPurchase(int purchaseValue)
         {
-            if ((currentMoney -= purchaseValue) < 0)
+            if (currentMoney < purchaseValue)
             {
                 return false;
             }

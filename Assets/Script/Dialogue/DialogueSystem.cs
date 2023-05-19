@@ -32,7 +32,10 @@ public class DialogueSystem : MonoBehaviour
     {
         if (spoke)
         {
-            TutorialManager.Instance.ChangeState(changeToThisState);
+            if (TutorialManager.Instance != null)
+            {
+                TutorialManager.Instance.ChangeState(changeToThisState);
+            }
         }
     }
 
