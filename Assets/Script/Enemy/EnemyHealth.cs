@@ -10,7 +10,8 @@ public class EnemyHealth : MonoBehaviour
     private float currentHealth;
     [SerializeField] private int _dropMoneyQuantity;
     [SerializeField] private GameObject _visualFX;
-    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private GameObject _sfxObject;
+    [SerializeField] private int score;
 
     private void Start()
     {
@@ -19,13 +20,13 @@ public class EnemyHealth : MonoBehaviour
 
     public void Damage(float value)
     {
-        _audioSource.pitch = Random.Range(1, 1.2f);
-        _audioSource.Play();
+        Instantiate(_sfxObject, transform.position, Quaternion.identity);
         currentHealth -= value;
         if(currentHealth <= 0)
         {
-            Die();
             Currency.Instance.AddMoney(_dropMoneyQuantity);
+            ScoreManager.Instance.IncreaseScore(score);
+            Die();
         }
     }
 

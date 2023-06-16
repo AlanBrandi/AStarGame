@@ -8,13 +8,31 @@ public class ScoreManager : MonoBehaviour
     public float pontosPorSegundo = 1f;
     public TMP_Text scoreTXT;
 
-    private float pontuacao = 0f;
+    private int score;
 
-    private void Update()
+    private static ScoreManager instance;
+
+    // Ensure that only one instance of the Singleton exists
+    private void Awake()
     {
-        pontuacao += pontosPorSegundo * Time.deltaTime;
-        int pontuacaoInteira = Mathf.FloorToInt(pontuacao);
-        scoreTXT.text = pontuacaoInteira.ToString();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    public static ScoreManager Instance
+    {
+        get { return instance; }
+    }
+    public void IncreaseScore(int i)
+    {
+        score += i;
+        scoreTXT.text = score.ToString();
     }
 
 }

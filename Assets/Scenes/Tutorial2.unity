@@ -2782,6 +2782,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
 --- !u!4 &119036902 stripped
@@ -3487,6 +3491,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
 --- !u!4 &155052470 stripped
@@ -25205,6 +25213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
 --- !u!4 &892169231 stripped
@@ -25275,6 +25287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
 --- !u!4 &895906237 stripped
@@ -31087,7 +31103,7 @@ AudioSource:
   m_GameObject: {fileID: 1098186903}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
   m_audioClip: {fileID: 8300000, guid: c800427f2d8f61c4c80233f7149e3c3f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.038
@@ -40382,6 +40398,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4027455831940362335, guid: 7e39318c8570d984e893ee8ba0de2cb6, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     - target: {fileID: 7257582163422362036, guid: 7e39318c8570d984e893ee8ba0de2cb6, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -43938,6 +43958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
 --- !u!4 &1445191102 stripped
@@ -66535,5 +66559,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}

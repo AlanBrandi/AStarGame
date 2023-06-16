@@ -944,6 +944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowTarget: 1
   towerValues: {fileID: 11400000, guid: f3bd2aaf12951c74095721257b300c4f, type: 2}
+  towerLevel: {fileID: 0}
+  currentTowerLevel: 0
   bullet: {fileID: 2846964017070874363, guid: ff9d3e309cb94fb4aa51375bf887c4d7, type: 3}
   bulletTransformSpawn: {fileID: 2778304621802549711}
   _audioSource: {fileID: 8490125800377619722}
@@ -981,7 +983,7 @@ AudioSource:
   m_GameObject: {fileID: 2778304620613754093}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2927672687157207781, guid: f709a21e6a6aee840b7068af03dbecf1, type: 2}
   m_audioClip: {fileID: 8300000, guid: 622ae7d47f7507b4fbb6a50ab0b58e61, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.059
