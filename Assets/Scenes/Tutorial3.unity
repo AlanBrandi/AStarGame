@@ -1123,21 +1123,85 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 196916254}
     m_Modifications:
+    - target: {fileID: 910555301735431551, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7274998605352777893, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: bridge
+      value: 
+      objectReference: {fileID: 605556550}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 690646390}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: breakFX
+      value: 
+      objectReference: {fileID: 7771137053329581436, guid: a5fb680aca15f3342889b99d22e3ef70, type: 3}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: cooldown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: pathIndex
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: _pathIndex
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 1003534812}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildingFX
+      value: 
+      objectReference: {fileID: 1516502874}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: pathFinder
+      value: 
+      objectReference: {fileID: 1265621720}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: _pathFinder
       value: 
       objectReference: {fileID: 1265621720}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: timeToLower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: whereToSpawn
+      value: 
+      objectReference: {fileID: 601031476}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildingSound
+      value: 
+      objectReference: {fileID: 1003534810}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildCompleteFX
+      value: 
+      objectReference: {fileID: 2193379951050006185, guid: 1c08e215a7370b247830d748479f0798, type: 3}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: cooldownIndicator
+      value: 
+      objectReference: {fileID: 155052471}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildCompleteSound
+      value: 
+      objectReference: {fileID: 1003534811}
     - target: {fileID: 7274998605741894806, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: m_Name
       value: ---Bridge---
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894806, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7274998605741894807, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: m_RootOrder
@@ -1188,6 +1252,11 @@ PrefabInstance:
 --- !u!4 &155052470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7274998605741894807, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 155052469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &155052471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 910555301735431551, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
   m_PrefabInstance: {fileID: 155052469}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &162057254
@@ -1388,6 +1457,11 @@ MeshFilter:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7465050117441125167, guid: d4ff099b8817338428600ec5a1121656, type: 3}
   m_PrefabInstance: {fileID: 1840232840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &182881588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5678519109054423983, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &184722685 stripped
 Transform:
@@ -4785,6 +4859,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550965847}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &554505660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7274998604090621064, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &573137137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,6 +5295,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 0}
   whereToSpawn: {fileID: 601031477}
+--- !u!1 &605556550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7274998604090621064, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 155052469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &612502456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6685,6 +6769,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690113039}
   m_CullTransparentMesh: 1
+--- !u!1 &690646390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7274998605352777893, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 155052469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &692834468
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,6 +10030,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998102392}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1003534810 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7274998605741895017, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1003534811 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7274998605741895018, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1003534812 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7274998605741895019, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1022519603
 GameObject:
   m_ObjectHideFlags: 0
@@ -15565,6 +15669,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511172796}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1516502874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5678519109054423983, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 155052469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520911936
 GameObject:
   m_ObjectHideFlags: 0
@@ -19228,6 +19337,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821476469}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1824341419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 910555301735431551, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1832664821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6054348211257905987, guid: 5347d1aadc7c577438457137f4b932f6, type: 3}
@@ -22414,6 +22528,11 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 6054348210192650441, guid: 5347d1aadc7c577438457137f4b932f6, type: 3}
   m_PrefabInstance: {fileID: 2035710945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2035751549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7274998605352777893, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+  m_PrefabInstance: {fileID: 7274998605926598762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2043830323
 GameObject:
   m_ObjectHideFlags: 0
@@ -24126,14 +24245,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 196916254}
     m_Modifications:
+    - target: {fileID: 910555301735431551, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444433496248063561, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 65118425}
     - target: {fileID: 7274998605352777912, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 65118425}
     - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: bridge
+      value: 
+      objectReference: {fileID: 554505660}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2035751549}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: breakFX
+      value: 
+      objectReference: {fileID: 7771137053329581436, guid: a5fb680aca15f3342889b99d22e3ef70, type: 3}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: cooldown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: pathIndex
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 1003534812}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildingFX
+      value: 
+      objectReference: {fileID: 182881588}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: pathFinder
+      value: 
+      objectReference: {fileID: 1265621720}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: _pathFinder
       value: 
       objectReference: {fileID: 1265621720}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: timeToLower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: whereToSpawn
+      value: 
+      objectReference: {fileID: 601031476}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildingSound
+      value: 
+      objectReference: {fileID: 1003534810}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildCompleteFX
+      value: 
+      objectReference: {fileID: 2193379951050006185, guid: 1c08e215a7370b247830d748479f0798, type: 3}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: cooldownIndicator
+      value: 
+      objectReference: {fileID: 1824341419}
+    - target: {fileID: 7274998605741894804, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
+      propertyPath: buildCompleteSound
+      value: 
+      objectReference: {fileID: 1003534811}
     - target: {fileID: 7274998605741894806, guid: aca0bc553e1c9594cb3755aa51594585, type: 3}
       propertyPath: m_Name
       value: ---Bridge---

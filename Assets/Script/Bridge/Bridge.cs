@@ -1,65 +1,92 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using QPathFinder;
 using TMPro;
 using UnityEditor;
+using UnityEngine.Serialization;
 
 public class Bridge : MonoBehaviour
 {
     [Header("Configuration")] 
-    [SerializeField] private float _timeToLower;
+    [SerializeField] private float timeToLower;
+    [SerializeField] private float cooldown;
+    
+    private float _cooldownRemain;
+    private bool _isOnCooldown;
 
     //Path to disable.
-    [SerializeField] private int _pathIndex;
+    [SerializeField] private int pathIndex;
 
     //Pathfinder with nodes and path using.
-    [SerializeField] private PathFinder _pathFinder;
+    [SerializeField] private PathFinder pathFinder;
 
-    //Disable brigde gameobject
-    [SerializeField] private GameObject _bridge;
+    //Disable bridge gameobject
+    [SerializeField] private GameObject bridge;
 
     //WhereToSpawnFx
-    [SerializeField] private GameObject _WhereToSpawn;
-
-    [Header("Canvas")] [SerializeField] private GameObject _canvas;
+    [SerializeField] private GameObject whereToSpawn;
+    
+    [Header("Canvas")] 
+    [SerializeField] private GameObject canvas;
 
     private TMP_Text countdownText;
-
+    
     [Header("Visual FX")]
-    [SerializeField] private GameObject _breakFX;
-    [SerializeField] private GameObject _buildCompleteFX;
-    [SerializeField] private GameObject _buildingFX;
+    [SerializeField] private GameObject breakFX;
+    [SerializeField] private GameObject buildCompleteFX;
+    [SerializeField] private GameObject buildingFX;
+    [SerializeField] private GameObject cooldownIndicator;
+
 
     [Header("Sound FX")] 
-    [SerializeField] private AudioSource _breakSound;
-    [SerializeField] private AudioSource _buildCompleteSound;
-    [SerializeField] private AudioSource _buildingSound;
+    [SerializeField] private AudioSource breakSound;
+    [SerializeField] private AudioSource buildCompleteSound;
+    [SerializeField] private AudioSource buildingSound;
 
     //Function variables.
     public bool isBroken;
     public void Raise()
     {
+        if (_isOnCooldown)
+        {
+            Debug.Log("The bridge is on cooldown. Wait for it to be available again.");
+            return;
+        }
+
         isBroken = true;
-        _pathFinder.graphData.GetPath(_pathIndex).isOpen = false;
-        _bridge.SetActive(false);
-        SpawnEffect(_breakFX, _breakSound);
-        SpawnEffect(_buildingFX, _buildingSound);
-        _canvas.SetActive(true);
+        pathFinder.graphData.GetPath(pathIndex).isOpen = false;
+        bridge.SetActive(false);
+        SpawnEffect(breakFX, breakSound);
+        SpawnEffect(buildingFX, buildingSound);
+        canvas.SetActive(true);
+        countdownText = canvas.GetComponentInChildren<TMP_Text>();
+        canvas.SetActive(true);
+        buildingFX.SetActive(true);
+        _cooldownRemain = cooldown;
         NotifyObservers();
-        countdownText = _canvas.GetComponentInChildren<TMP_Text>();
-        _canvas.SetActive(true);
         StartCountdown();
-        _buildingFX.SetActive(true);
     }
 
     public void Lower()
     {
-        _bridge.SetActive(true);
-        _pathFinder.graphData.GetPath(_pathIndex).isOpen = true;
-        SpawnEffect(_buildCompleteFX, _buildCompleteSound);
+        Debug.LogWarning("LOWER");
+        if (_isOnCooldown)
+        {
+            Debug.Log("The bridge is on cooldown. Wait for it to be available again.");
+            return;
+        }
+
+        bridge.SetActive(true);
+        pathFinder.graphData.GetPath(pathIndex).isOpen = true;
+        SpawnEffect(buildCompleteFX, buildCompleteSound);
         NotifyObservers();
         isBroken = false;
+
+        _cooldownRemain = cooldown;
+        _isOnCooldown = true;
+        Debug.LogWarning("CABO O LOWER");
     }
 
     private void NotifyObservers()
@@ -69,7 +96,7 @@ public class Bridge : MonoBehaviour
 
     private void SpawnEffect(GameObject fx, AudioSource soundFx)
     {
-        Instantiate(fx, _WhereToSpawn.transform.position, fx.transform.rotation);
+        Instantiate(fx, whereToSpawn.transform.position, fx.transform.rotation);
         soundFx.Play();
     }
 
@@ -77,9 +104,10 @@ public class Bridge : MonoBehaviour
     {
         StartCoroutine(StartCountdownCou());
     }
+
     private IEnumerator StartCountdownCou()
     {
-        float currentTime = _timeToLower;
+        float currentTime = timeToLower;
         while (currentTime > 0)
         {
             countdownText.text = currentTime.ToString("0");
@@ -90,11 +118,29 @@ public class Bridge : MonoBehaviour
         }
         if (currentTime <= 0)
         {
-            _canvas.SetActive(false);
-            StopCoroutine(StartCountdownCou());
+            canvas.SetActive(false);
             Lower();
-            _buildingFX.SetActive(false);
-            _buildingSound.Stop();
+            buildingFX.SetActive(false);
+            buildingSound.Stop();
+            StartCountdown();
+            Debug.LogWarning("FINISHED COUNTDOWN");
+            StopCoroutine(StartCountdownCou());
+            StartCoroutine(CooldownCoroutine());
         }
+    }
+
+    private IEnumerator CooldownCoroutine()
+    {
+        _cooldownRemain = cooldown;
+        _isOnCooldown = true;
+        cooldownIndicator.SetActive(true);
+        while (_cooldownRemain > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            _cooldownRemain--;
+        }
+        _isOnCooldown = false;
+        cooldownIndicator.SetActive(false);
+        //StopCoroutine(CooldownCoroutine());
     }
 }
